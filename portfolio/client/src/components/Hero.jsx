@@ -30,13 +30,13 @@ export default function Hero() {
     >
       {/* Content Layer */}
       <div style={{ position: "relative", zIndex: 1 }}>
-        <Motion.h1
+        <Motion.div
           variants={itemUp}
           style={{ fontSize: "2rem", marginBottom: "1rem" }}
         >
           <h1>Full-Stack Developer</h1>
           <h4>Software • Web • Databases</h4>
-        </Motion.h1>
+        </Motion.div>
 
         <Motion.p
           variants={itemUp}

@@ -3,6 +3,56 @@ import Hero from "../components/Hero";
 import Section from "../components/Section";
 import Card from "../components/Card";
 import profilePic from "../assets/pro pic.jpeg";
+import placeholder from "../assets/placeholder.png";
+
+/* =======================
+   FRONTEND ICONS
+======================= */
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaBootstrap } from "react-icons/fa";
+import {
+  SiTypescript,
+  SiTailwindcss,
+  SiNextdotjs,
+  SiAstro,
+} from "react-icons/si";
+
+/* =======================
+   BACKEND ICONS
+======================= */
+import { FaNodeJs, FaPython, FaPhp } from "react-icons/fa";
+import { SiExpress, SiDotnet, SiDjango, SiLaravel } from "react-icons/si";
+import { TbBrandCSharp } from "react-icons/tb";
+
+/* =======================
+   DATABASE ICONS
+======================= */
+import {
+  SiMongodb,
+  SiPostgresql,
+  SiMysql,
+  SiPrisma,
+  SiSequelize,
+} from "react-icons/si";
+
+/* =======================
+   CLOUD & DEVOPS ICONS
+======================= */
+import { SiVercel, SiDigitalocean } from "react-icons/si";
+import { FaAws } from "react-icons/fa";
+import { VscAzure } from "react-icons/vsc";
+
+/* =======================
+   TOOLS & PLATFORMS ICONS
+======================= */
+import { FaGithub, FaGitlab, FaTrello } from "react-icons/fa";
+import {
+  SiBitbucket,
+  SiNotion,
+  SiStripe,
+  SiPaypal,
+  SiOpenai,
+} from "react-icons/si";
+import { VscVscode } from "react-icons/vsc";
 
 export default function Home() {
   const [firstName, setFirstName] = useState("");
@@ -12,7 +62,7 @@ export default function Home() {
   const [message, setMessage] = useState("");
   const [sending, setSending] = useState(false);
   const [showMoreProjects, setShowMoreProjects] = useState(false);
-  const [activeTab, setActiveTab] = useState("languages");
+  const [activeTab, setActiveTab] = useState("frontend");
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -57,12 +107,10 @@ export default function Home() {
           <img className="profile-pic" src={profilePic} alt="Profile" />
 
           <div>
-            <p>
-              <h2>
-                Full-Stack (MERN) developer with a backend and database
-                specialisation.
-              </h2>
-            </p>
+            <h1>
+              Full-Stack (MERN) developer with a backend and database
+              specialisation
+            </h1>
 
             <p
               style={{
@@ -126,307 +174,260 @@ export default function Home() {
       <Section id="services" title="Services">
         <div className="container">
           <div className="projects-grid">
-            <div className="project-card">
-              <h3>Database Cleanup & Optimization</h3>
-              <p>
-                I clean and restructure messy data, normalise schemas where
-                necessary, and tune queries for performance. I specialise in
-                identifying slow indexes, refactoring costly joins, and
-                integrating with Azure services for reliable backups and
-                scaling. Typical work includes data deduplication, schema
-                optimisation, and implementing monitoring to prevent
-                regressions. Clients usually see faster queries and reduced
-                operational overhead.
-              </p>
-              <p>
-                <strong>Pricing:</strong> Starting R2,000 / $150
-              </p>
-              <div style={{ marginTop: "0.5rem" }}>
-                <button className="btn">Get Quote</button>
+            {[
+              {
+                title: "Database Cleanup & Optimization",
+                desc: "Schema refactoring, performance tuning, indexing and backups.",
+                action: "Get Quote",
+              },
+              {
+                title: "Custom API Development",
+                desc: "Secure REST & GraphQL APIs with authentication and rate limiting.",
+                action: "Discuss",
+              },
+              {
+                title: "Reporting Dashboards",
+                desc: "Automated reporting dashboards with real-time data pipelines.",
+                action: "See Examples",
+              },
+              {
+                title: "Automation Scripts",
+                desc: "Workflow automation, schedulers and AI-assisted processes.",
+                action: "Improve Workflow",
+              },
+              {
+                title: "Basic AI Integrations",
+                desc: "Chatbots, summarization, intelligent endpoints.",
+                action: "Explore AI",
+              },
+              {
+                title: "Full Backend Setup",
+                desc: "CI/CD, cloud deployment and production-ready backend stacks.",
+                action: "Start Project",
+              },
+            ].map((s, i) => (
+              <div className="project-card" key={i}>
+                <img
+                  src={placeholder}
+                  alt={s.title}
+                  className="project-image"
+                />
+
+                <div className="project-content">
+                  <h3>{s.title}</h3>
+                  <p>{s.desc}</p>
+
+                  <div className="project-actions">
+                    <button className="btn">{s.action}</button>
+                  </div>
+                </div>
               </div>
-            </div>
-
-            <div className="project-card">
-              <h3>Custom API Development</h3>
-              <p>
-                I build secure, well-documented APIs for integrations, using
-                best practices around authentication, rate limiting and error
-                handling. Example work includes building payment/settlement
-                integrations and partner APIs for fintech systems. I commonly
-                use C# and Node, and can deliver RESTful or GraphQL interfaces
-                depending on needs.
-              </p>
-              <p>
-                <strong>Pricing:</strong> Custom — contact for details
-              </p>
-              <div style={{ marginTop: "0.5rem" }}>
-                <button className="btn">Discuss</button>
-              </div>
-            </div>
-
-            <div className="project-card">
-              <h3>Reporting Dashboards</h3>
-              <p>
-                Interactive dashboards for business users, combining backend ETL
-                and real-time updates (SignalR) where required. I design
-                KPI-driven views and automate data pipelines so reports refresh
-                reliably. This saves hours on manual reporting and simplifies
-                decision-making for stakeholders.
-              </p>
-              <p>
-                <strong>ROI:</strong> Save hours on reports and improve accuracy
-              </p>
-              <div style={{ marginTop: "0.5rem" }}>
-                <button className="btn">See Examples</button>
-              </div>
-            </div>
-
-            <div className="project-card">
-              <h3>Automation Scripts</h3>
-              <p>
-                Automate repetitive workflows using scripts and lightweight
-                services. Examples include data syncs, scheduled processing and
-                AI-enhanced automation for logistics. These reduce manual effort
-                and enable teams to focus on higher-value work.
-              </p>
-              <p>
-                <strong>Pricing:</strong> Starting R5,000 / $300
-              </p>
-              <div style={{ marginTop: "0.5rem" }}>
-                <button className="btn">Improve Workflow</button>
-              </div>
-            </div>
-
-            <div className="project-card">
-              <h3>Basic AI Integrations</h3>
-              <p>
-                Quick integrations to add intelligent features — chat
-                assistants, summarisation, or simple prediction endpoints. I
-                focus on pragmatic solutions that integrate with existing
-                systems and deliver measurable value quickly.
-              </p>
-              <div style={{ marginTop: "0.5rem" }}>
-                <button className="btn">Explore AI</button>
-              </div>
-            </div>
-
-            <div className="project-card">
-              <h3>Full Backend Setup</h3>
-              <p>
-                End-to-end backend architecture setup, including CI/CD,
-                observability and deployment to Azure. Ideal when you want a
-                production-ready stack built with reliability and scale in mind.
-              </p>
-              <div style={{ marginTop: "0.5rem" }}>
-                <button className="btn">Start Project</button>
-              </div>
-            </div>
-          </div>
-
-          <div style={{ marginTop: "1rem" }}>
-            <h4>Why Me?</h4>
-            <ul>
-              <li>NDip in relevant field</li>
-              <li>Internship experience and production work</li>
-              <li>South Africa and international clients</li>
-              <li>Focus on measurable ROI and maintainability</li>
-            </ul>
-
-            <h4>Testimonials</h4>
-            <div className="project-card">
-              "Placeholder testimonial — great work!"
-            </div>
+            ))}
           </div>
         </div>
       </Section>
 
+      {/* =======================
+          SKILLS SECTION
+      ======================= */}
       <Section id="skills" title="Skills">
-        <div className="container">
-          <div className="tabs">
-            <div
-              className={`tab ${activeTab === "languages" ? "active" : ""}`}
-              onClick={() => setActiveTab("languages")}
-            >
-              Languages
+        {/* Tabs */}
+        <div className="hero-cta">
+          <button className="btn" onClick={() => setActiveTab("frontend")}>
+            Frontend
+          </button>
+          <button className="btn" onClick={() => setActiveTab("backend")}>
+            Backend
+          </button>
+          <button className="btn" onClick={() => setActiveTab("databases")}>
+            Databases
+          </button>
+          <button className="btn" onClick={() => setActiveTab("cloud")}>
+            Cloud & DevOps
+          </button>
+          <button className="btn" onClick={() => setActiveTab("tools")}>
+            Tools & Platforms
+          </button>
+        </div>
+
+        {/* Grid Wrapper */}
+        <div className="skills-grid-wrapper">
+          {activeTab === "frontend" && (
+            <div className="logo-grid">
+              <FaHtml5 style={{ fontSize: "100px" }} />
+              <FaCss3Alt style={{ fontSize: "100px" }} />
+              <FaJs style={{ fontSize: "100px" }} />
+              <SiTypescript style={{ fontSize: "100px" }} />
+              <FaReact style={{ fontSize: "100px" }} />
+              <SiTailwindcss style={{ fontSize: "100px" }} />
+              <FaBootstrap style={{ fontSize: "100px" }} />
+              <SiNextdotjs style={{ fontSize: "100px" }} />
+              <SiAstro />
             </div>
+          )}
 
-            <div
-              className={`tab ${activeTab === "frameworks" ? "active" : ""}`}
-              onClick={() => setActiveTab("frameworks")}
-            >
-              Frameworks
+          {activeTab === "backend" && (
+            <div className="logo-grid">
+              <FaNodeJs style={{ fontSize: "100px" }} />
+              <SiExpress style={{ fontSize: "100px" }} />
+              <SiDotnet style={{ fontSize: "100px" }} />
+              <TbBrandCSharp style={{ fontSize: "100px" }} />
+              <FaPython style={{ fontSize: "100px" }} />
+              <SiDjango style={{ fontSize: "100px" }} />
+              <FaPhp style={{ fontSize: "100px" }} />
+              <SiLaravel style={{ fontSize: "100px" }} />
             </div>
+          )}
 
-            <div
-              className={`tab ${activeTab === "tools" ? "active" : ""}`}
-              onClick={() => setActiveTab("tools")}
-            >
-              Tools
+          {activeTab === "databases" && (
+            <div className="logo-grid">
+              <SiMongodb style={{ fontSize: "100px" }} />
+              <SiPostgresql style={{ fontSize: "100px" }} />
+              <SiMysql style={{ fontSize: "100px" }} />
+              <SiPrisma style={{ fontSize: "100px" }} />
+              <SiSequelize style={{ fontSize: "100px" }} />
             </div>
+          )}
 
-            <div
-              className={`tab ${activeTab === "platforms" ? "active" : ""}`}
-              onClick={() => setActiveTab("platforms")}
-            >
-              Platforms
+          {activeTab === "cloud" && (
+            <div className="logo-grid">
+              <VscAzure style={{ fontSize: "100px" }} />
+              <FaAws style={{ fontSize: "100px" }} />
+              <SiVercel style={{ fontSize: "100px" }} />
+              <SiDigitalocean style={{ fontSize: "100px" }} />
             </div>
-          </div>
+          )}
 
-          {/* CLICK RESULT AREA */}
-          <div className="skills-grid-wrapper">
-            {activeTab === "languages" && (
-              <div className="logo-grid">
-                <div className="logo-placeholder">JS</div>
-                <div className="logo-placeholder">C#</div>
-                <div className="logo-placeholder">Python</div>
-                <div className="logo-placeholder">SQL</div>
-                <div className="logo-placeholder">Java</div>
-              </div>
-            )}
-
-            {activeTab === "frameworks" && (
-              <div className="logo-grid">
-                <div className="logo-placeholder">React</div>
-                <div className="logo-placeholder">Node</div>
-                <div className="logo-placeholder">Express</div>
-                <div className="logo-placeholder">.NET</div>
-                <div className="logo-placeholder">Next</div>
-              </div>
-            )}
-
-            {activeTab === "tools" && (
-              <div className="logo-grid">
-                <div className="logo-placeholder">Git</div>
-                <div className="logo-placeholder">Docker</div>
-                <div className="logo-placeholder">Postgres</div>
-                <div className="logo-placeholder">VS Code</div>
-                <div className="logo-placeholder">Azure</div>
-              </div>
-            )}
-
-            {activeTab === "platforms" && (
-              <div className="logo-grid">
-                <div className="logo-placeholder">AWS</div>
-                <div className="logo-placeholder">Azure</div>
-                <div className="logo-placeholder">GCP</div>
-                <div className="logo-placeholder">Linux</div>
-                <div className="logo-placeholder">Windows</div>
-              </div>
-            )}
-          </div>
+          {activeTab === "tools" && (
+            <div className="logo-grid">
+              <FaGithub style={{ fontSize: "100px" }} />
+              <FaGitlab style={{ fontSize: "100px" }} />
+              <SiBitbucket style={{ fontSize: "100px" }} />
+              <SiOpenai style={{ fontSize: "100px" }} />
+              <SiNotion style={{ fontSize: "100px" }} />
+              <FaTrello style={{ fontSize: "100px" }} />
+              <SiStripe style={{ fontSize: "100px" }} />
+              <SiPaypal style={{ fontSize: "100px" }} />
+            </div>
+          )}
         </div>
       </Section>
 
       <Section id="projects" title="Projects">
         <div className="container">
           <div className="projects-grid">
-            <div className="project-card">
-              <h3>Project One</h3>
-              <p>Short description of project one.</p>
-              <div className="project-actions">
-                <a className="btn" href="#">
-                  Live
+            {[
+              {
+                title: "Project One",
+                desc: "Short description of project one.",
+                live: "#",
+                repo: "#",
+                link: "#",
+              },
+              {
+                title: "Project Two",
+                desc: "Short description of project two.",
+                live: "#",
+                repo: "#",
+                link: "#",
+              },
+              {
+                title: "Project Three",
+                desc: "Short description of project three.",
+                live: "#",
+                repo: "#",
+                link: "#",
+              },
+            ].map((p, i) => (
+              <div className="project-card" key={i}>
+                <a
+                  href={p.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="project-image-link"
+                >
+                  <img
+                    src={placeholder}
+                    alt={p.title}
+                    className="project-image"
+                  />
                 </a>
-                <a className="btn" href="#">
-                  Repo
-                </a>
-              </div>
-            </div>
 
-            <div className="project-card">
-              <h3>Project Two</h3>
-              <p>Short description of project two.</p>
-              <div className="project-actions">
-                <a className="btn" href="#">
-                  Live
-                </a>
-                <a className="btn" href="#">
-                  Repo
-                </a>
-              </div>
-            </div>
+                <div className="project-content">
+                  <h3>{p.title}</h3>
+                  <p>{p.desc}</p>
 
-            <div className="project-card">
-              <h3>Project Three</h3>
-              <p>Short description of project three.</p>
-              <div className="project-actions">
-                <a className="btn" href="#">
-                  Live
-                </a>
-                <a className="btn" href="#">
-                  Repo
-                </a>
+                  <div className="project-actions">
+                    <a className="btn" href={p.live} target="_blank">
+                      Live
+                    </a>
+                    <a className="btn" href={p.repo} target="_blank">
+                      Repo
+                    </a>
+                  </div>
+                </div>
               </div>
-            </div>
-
-            <div className="project-card">
-              <h3>Project Four</h3>
-              <p>Short description of project four.</p>
-              <div className="project-actions">
-                <a className="btn" href="#">
-                  Live
-                </a>
-                <a className="btn" href="#">
-                  Repo
-                </a>
-              </div>
-            </div>
+            ))}
           </div>
 
           {showMoreProjects && (
-            <div style={{ marginTop: "1rem" }} className="projects-grid">
-              <div className="project-card">
-                <h3>Project Five</h3>
-                <p>More Project A (placeholder)</p>
-                <div className="project-actions">
-                  <a className="btn" href="#">
-                    Live
+            <div className="projects-grid" style={{ marginTop: "1rem" }}>
+              {[
+                {
+                  title: "Project Four",
+                  desc: "Hidden project one.",
+                  live: "#",
+                  repo: "#",
+                  link: "#",
+                },
+                {
+                  title: "Project Five",
+                  desc: "Hidden project two.",
+                  live: "#",
+                  repo: "#",
+                  link: "#",
+                },
+                {
+                  title: "Project Six",
+                  desc: "Hidden project three.",
+                  live: "#",
+                  repo: "#",
+                  link: "#",
+                },
+              ].map((p, i) => (
+                <div className="project-card" key={i}>
+                  <a
+                    href={p.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="project-image-link"
+                  >
+                    <img
+                      src={placeholder}
+                      alt={p.title}
+                      className="project-image"
+                    />
                   </a>
-                  <a className="btn" href="#">
-                    Repo
-                  </a>
+
+                  <div className="project-content">
+                    <h3>{p.title}</h3>
+                    <p>{p.desc}</p>
+
+                    <div className="project-actions">
+                      <a className="btn" href={p.live} target="_blank">
+                        Live
+                      </a>
+                      <a className="btn" href={p.repo} target="_blank">
+                        Repo
+                      </a>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div className="project-card">
-                <h3>Project Six</h3>
-                <p>More Project B (placeholder)</p>
-                <div className="project-actions">
-                  <a className="btn" href="#">
-                    Live
-                  </a>
-                  <a className="btn" href="#">
-                    Repo
-                  </a>
-                </div>
-              </div>
-              <div className="project-card">
-                <h3>Project Seven</h3>
-                <p>More Project C (placeholder)</p>
-                <div className="project-actions">
-                  <a className="btn" href="#">
-                    Live
-                  </a>
-                  <a className="btn" href="#">
-                    Repo
-                  </a>
-                </div>
-              </div>
-              <div className="project-card">
-                <h3>Project Eight</h3>
-                <p>More Project D (placeholder)</p>
-                <div className="project-actions">
-                  <a className="btn" href="#">
-                    Live
-                  </a>
-                  <a className="btn" href="#">
-                    Repo
-                  </a>
-                </div>
-              </div>
+              ))}
             </div>
           )}
 
-          <div className="project-actions">
+          <div className="project-actions" style={{ marginTop: "1rem" }}>
             <button
               className="btn"
               onClick={() => setShowMoreProjects((s) => !s)}
@@ -443,7 +444,7 @@ export default function Home() {
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "1fr 1fr",
+                gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))",
                 gap: "0.75rem",
               }}
             >

@@ -6,60 +6,50 @@ import profilePic from "../assets/pro pic.jpeg";
 import placeholder from "../assets/placeholder.png";
 
 /* =======================
-   FRONTEND ICONS
+   ICON IMPORTS
 ======================= */
-import {
-  FaHtml5,
-  FaCss3Alt,
-  FaJs,
-  FaReact,
-  FaBootstrap,
-  FaLinkedin,
-} from "react-icons/fa";
-import {
-  SiTypescript,
-  SiTailwindcss,
-  SiNextdotjs,
-  SiAstro,
-} from "react-icons/si";
 
-/* =======================
-   BACKEND ICONS
-======================= */
-import { FaNodeJs, FaPython, FaPhp } from "react-icons/fa";
-import { SiExpress, SiDotnet, SiDjango, SiLaravel } from "react-icons/si";
-import { TbBrandCSharp } from "react-icons/tb";
+/* Backend / Core */
+import { FaNodeJs, FaPython, FaPhp, FaDocker, FaAws } from "react-icons/fa";
+import { TbBrandCSharp, TbSql } from "react-icons/tb";
+import { SiLaravel } from "react-icons/si";
 
-/* =======================
-   DATABASE ICONS
-======================= */
-import {
-  SiMongodb,
-  SiPostgresql,
-  SiMysql,
-  SiPrisma,
-  SiSequelize,
-} from "react-icons/si";
+/* Frameworks / APIs */
+import { SiExpress, SiDotnet, SiGraphql, SiNginx } from "react-icons/si";
 
-/* =======================
-   CLOUD & DEVOPS ICONS
-======================= */
-import { SiVercel, SiDigitalocean } from "react-icons/si";
-import { FaAws } from "react-icons/fa";
-import { VscAzure } from "react-icons/vsc";
+/* Databases */
+import { SiPostgresql, SiMysql, SiMongodb } from "react-icons/si";
+import { SiPrisma, SiSequelize } from "react-icons/si";
 
-/* =======================
-   TOOLS & PLATFORMS ICONS
-======================= */
-import { FaGithub, FaGitlab, FaTrello } from "react-icons/fa";
-import {
-  SiBitbucket,
-  SiNotion,
-  SiStripe,
-  SiPaypal,
-  SiOpenai,
-} from "react-icons/si";
-import { VscVscode } from "react-icons/vsc";
+/* Frontend / UI */
+import { FaReact } from "react-icons/fa";
+import { SiTailwindcss, SiCss3, SiHtml5 } from "react-icons/si";
+import { FaHtml5, FaCss3Alt, FaJs, FaBootstrap } from "react-icons/fa";
+import { SiTypescript } from "react-icons/si";
+
+/* Analytics */
+import { SiChartdotjs } from "react-icons/si";
+import { VscGraph } from "react-icons/vsc";
+
+/* CMS */
+import { FaWordpress } from "react-icons/fa";
+
+/* AI */
+import { SiOpenai } from "react-icons/si";
+
+/* Automation / DevOps */
+import { SiGithubactions } from "react-icons/si";
+
+/* Design & Signage */
+import { SiFigma, SiCanva, SiAdobeaftereffects } from "react-icons/si";
+
+/* Social */
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+
+/* Other */
+import { SiNetlify, SiDigitalocean } from "react-icons/si";
+import { FaGitlab } from "react-icons/fa";
+import { SiBitbucket } from "react-icons/si";
 
 export default function Home() {
   const [firstName, setFirstName] = useState("");
@@ -180,6 +170,9 @@ export default function Home() {
         </div>
       </Section>
 
+      {/* =======================
+          SERVICES
+      ======================= */}
       <Section id="services" title="Services">
         <div className="container">
           <div className="projects-grid">
@@ -188,46 +181,86 @@ export default function Home() {
                 title: "Database Cleanup & Optimization",
                 desc: "Schema refactoring, performance tuning, indexing strategies, backups and data integrity improvements.",
                 action: "Optimize My Database",
+                icons: [
+                  <TbSql />,
+                  <SiPostgresql />,
+                  <SiMysql />,
+                  <SiMongodb />,
+                ],
               },
               {
                 title: "Custom API & Backend Systems",
                 desc: "Secure REST & GraphQL APIs, authentication, rate limiting and scalable backend architectures.",
                 action: "Design My Backend",
+                icons: [
+                  <FaNodeJs />,
+                  <SiExpress />,
+                  <SiDotnet />,
+                  <SiGraphql />,
+                  <TbBrandCSharp />,
+                ],
               },
               {
                 title: "Reporting & Analytics Dashboards",
                 desc: "Data-driven dashboards with automated pipelines, real-time insights and clean UI presentation.",
                 action: "Visualize My Data",
+                icons: [
+                  <FaReact />,
+                  <VscGraph />,
+                  <SiChartdotjs />,
+                  <SiPostgresql />,
+                ],
               },
               {
                 title: "Automation & Workflow Engineering",
                 desc: "Custom scripts, schedulers and AI-assisted processes to eliminate manual work and improve efficiency.",
                 action: "Automate My Processes",
+                icons: [<FaNodeJs />, <FaPython />, <SiGithubactions />],
               },
               {
                 title: "Product-Focused UI & Digital Design",
-                desc: "Clean UI/UX for web apps, dashboards, CMS platforms and brand-consistent digital interfaces.",
+                desc: "Clean UI/UX for web apps, dashboards and product-driven interfaces.",
                 action: "Design My Product Interface",
+                icons: [
+                  <SiFigma />,
+                  <FaReact />,
+                  <SiTailwindcss />,
+                  <SiCss3 />,
+                ],
               },
               {
-                title: "Digital Visuals & Signage Systems",
-                desc: "Static and animated digital visuals, signage content and screen-ready designs for businesses.",
-                action: "Create My Digital Visuals",
+                title: "Digital Menu Boards & Signage Systems",
+                desc: "Static and animated digital menus, signage visuals and screen-ready content.",
+                action: "Create My Digital Menu",
+                icons: [
+                  <SiCanva />,
+                  <SiAdobeaftereffects />,
+                  <SiFigma />,
+                  <SiHtml5 />,
+                ],
               },
               {
                 title: "CMS Development & Content Systems",
-                desc: "Custom WordPress builds, content structures and admin-friendly systems tailored to your business.",
+                desc: "Custom WordPress builds and admin-friendly content platforms.",
                 action: "Launch My Content System",
+                icons: [<FaWordpress />, <FaPhp />, <SiMysql />],
               },
               {
                 title: "Basic AI Integrations",
                 desc: "Chatbots, summarization, intelligent endpoints and AI-enhanced system features.",
                 action: "Add Intelligence to My System",
+                icons: [<SiOpenai />, <FaNodeJs />, <FaPython />],
               },
               {
                 title: "Full System Setup & Deployment",
-                desc: "CI/CD pipelines, cloud deployment and production-ready full-stack system setups.",
+                desc: "CI/CD pipelines, cloud deployment and production-ready systems.",
                 action: "Take My System Live",
+                icons: [
+                  <FaAws />,
+                  <FaDocker />,
+                  <SiGithubactions />,
+                  <SiNginx />,
+                ],
               },
             ].map((s, i) => (
               <div className="project-card" key={i}>
@@ -240,6 +273,21 @@ export default function Home() {
                 <div className="project-content">
                   <h3>{s.title}</h3>
                   <p>{s.desc}</p>
+
+                  {/* ICON ROW */}
+                  <div
+                    style={{
+                      display: "flex",
+                      gap: "1rem",
+                      fontSize: "1.5rem",
+                      opacity: 0.85,
+                      margin: "1.5rem 0",
+                    }}
+                  >
+                    {s.icons.map((Icon, idx) => (
+                      <span key={idx}>{Icon}</span>
+                    ))}
+                  </div>
 
                   <div className="project-actions">
                     <button className="btn">{s.action}</button>
@@ -266,9 +314,6 @@ export default function Home() {
           <button className="btn" onClick={() => setActiveTab("databases")}>
             Databases
           </button>
-          <button className="btn" onClick={() => setActiveTab("cloud")}>
-            Cloud & DevOps
-          </button>
           <button className="btn" onClick={() => setActiveTab("tools")}>
             Tools & Platforms
           </button>
@@ -285,8 +330,6 @@ export default function Home() {
               <FaReact style={{ fontSize: "100px" }} />
               <SiTailwindcss style={{ fontSize: "100px" }} />
               <FaBootstrap style={{ fontSize: "100px" }} />
-              <SiNextdotjs style={{ fontSize: "100px" }} />
-              <SiAstro />
             </div>
           )}
 
@@ -297,28 +340,22 @@ export default function Home() {
               <SiDotnet style={{ fontSize: "100px" }} />
               <TbBrandCSharp style={{ fontSize: "100px" }} />
               <FaPython style={{ fontSize: "100px" }} />
-              <SiDjango style={{ fontSize: "100px" }} />
               <FaPhp style={{ fontSize: "100px" }} />
               <SiLaravel style={{ fontSize: "100px" }} />
+              <SiGithubactions style={{ fontSize: "100px" }} />
             </div>
           )}
 
           {activeTab === "databases" && (
             <div className="logo-grid">
+              <TbSql style={{ fontSize: "100px" }} />
               <SiMongodb style={{ fontSize: "100px" }} />
               <SiPostgresql style={{ fontSize: "100px" }} />
               <SiMysql style={{ fontSize: "100px" }} />
               <SiPrisma style={{ fontSize: "100px" }} />
               <SiSequelize style={{ fontSize: "100px" }} />
-            </div>
-          )}
-
-          {activeTab === "cloud" && (
-            <div className="logo-grid">
-              <VscAzure style={{ fontSize: "100px" }} />
-              <FaAws style={{ fontSize: "100px" }} />
-              <SiVercel style={{ fontSize: "100px" }} />
-              <SiDigitalocean style={{ fontSize: "100px" }} />
+              <VscGraph style={{ fontSize: "100px" }} />
+              <SiChartdotjs style={{ fontSize: "100px" }} />
             </div>
           )}
 
@@ -328,10 +365,10 @@ export default function Home() {
               <FaGitlab style={{ fontSize: "100px" }} />
               <SiBitbucket style={{ fontSize: "100px" }} />
               <SiOpenai style={{ fontSize: "100px" }} />
-              <SiNotion style={{ fontSize: "100px" }} />
-              <FaTrello style={{ fontSize: "100px" }} />
-              <SiStripe style={{ fontSize: "100px" }} />
-              <SiPaypal style={{ fontSize: "100px" }} />
+              <FaAws style={{ fontSize: "100px" }} />
+              <SiNetlify style={{ fontSize: "100px" }} />
+              <SiDigitalocean style={{ fontSize: "100px" }} />
+              <SiGraphql style={{ fontSize: "100px" }} />
             </div>
           )}
         </div>

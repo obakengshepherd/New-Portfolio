@@ -44,7 +44,7 @@ export default function Hero() {
             <h4>Software • Web • Databases</h4>
           </Motion.div>
 
-          <Motion.p
+          <Motion.div
             variants={itemUp}
             style={{ marginBottom: "1.5rem", color: "#ffffffff" }}
           >
@@ -52,7 +52,7 @@ export default function Hero() {
               Full-Stack Developer specializing in backend systems, automation,
               and product focused design.
             </h3>
-          </Motion.p>
+          </Motion.div>
 
           <div className="hero-cta">
             <a href="#projects" className="btn" aria-label="View Projects">

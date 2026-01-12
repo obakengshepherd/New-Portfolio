@@ -83,7 +83,7 @@ section {
 }
 
 .top-info-bar a:hover {
-  color: #ef4444; /* red accent like examples */
+  color: #ff0000; /* red accent like examples */
   transform: translateY(-1px);
 }
 
@@ -121,7 +121,7 @@ section {
   background: linear-gradient(90deg, #334155, #3b82f6);
 }
 
-/* ✅ Brand link: disable hover effects */
+/* disable hover effects */
 .nav-brand:hover,
 .nav-brand:focus {
   transform: none;
@@ -315,8 +315,10 @@ section {
 
 .logo-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 5.5rem;
+  margin-top: 1.5rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3.5rem;
+  padding: 1.5rem 0;
 }
 
 .logo-placeholder {

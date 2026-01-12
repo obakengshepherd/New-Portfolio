@@ -8,7 +8,14 @@ import placeholder from "../assets/placeholder.png";
 /* =======================
    FRONTEND ICONS
 ======================= */
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaBootstrap } from "react-icons/fa";
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaReact,
+  FaBootstrap,
+  FaLinkedin,
+} from "react-icons/fa";
 import {
   SiTypescript,
   SiTailwindcss,
@@ -108,8 +115,8 @@ export default function Home() {
 
           <div>
             <h1>
-              Full-Stack (MERN) developer with a backend and database
-              specialisation
+              I help businesses run better through well-designeed, automated
+              digital systems.
             </h1>
 
             <p
@@ -155,7 +162,8 @@ export default function Home() {
                 rel="noreferrer"
                 aria-label="LinkedIn"
               >
-                <span aria-hidden>🔗</span> LinkedIn
+                <span aria-hidden></span>
+                <FaLinkedin />
               </a>
               <a
                 className="nav-link"
@@ -164,7 +172,8 @@ export default function Home() {
                 rel="noreferrer"
                 aria-label="GitHub"
               >
-                <span aria-hidden>🐙</span> GitHub
+                <span aria-hidden></span>
+                <FaGithub />
               </a>
             </div>
           </div>
@@ -177,33 +186,48 @@ export default function Home() {
             {[
               {
                 title: "Database Cleanup & Optimization",
-                desc: "Schema refactoring, performance tuning, indexing and backups.",
-                action: "Get Quote",
+                desc: "Schema refactoring, performance tuning, indexing strategies, backups and data integrity improvements.",
+                action: "Optimize My Database",
               },
               {
-                title: "Custom API Development",
-                desc: "Secure REST & GraphQL APIs with authentication and rate limiting.",
-                action: "Discuss",
+                title: "Custom API & Backend Systems",
+                desc: "Secure REST & GraphQL APIs, authentication, rate limiting and scalable backend architectures.",
+                action: "Design My Backend",
               },
               {
-                title: "Reporting Dashboards",
-                desc: "Automated reporting dashboards with real-time data pipelines.",
-                action: "See Examples",
+                title: "Reporting & Analytics Dashboards",
+                desc: "Data-driven dashboards with automated pipelines, real-time insights and clean UI presentation.",
+                action: "Visualize My Data",
               },
               {
-                title: "Automation Scripts",
-                desc: "Workflow automation, schedulers and AI-assisted processes.",
-                action: "Improve Workflow",
+                title: "Automation & Workflow Engineering",
+                desc: "Custom scripts, schedulers and AI-assisted processes to eliminate manual work and improve efficiency.",
+                action: "Automate My Processes",
+              },
+              {
+                title: "Product-Focused UI & Digital Design",
+                desc: "Clean UI/UX for web apps, dashboards, CMS platforms and brand-consistent digital interfaces.",
+                action: "Design My Product Interface",
+              },
+              {
+                title: "Digital Visuals & Signage Systems",
+                desc: "Static and animated digital visuals, signage content and screen-ready designs for businesses.",
+                action: "Create My Digital Visuals",
+              },
+              {
+                title: "CMS Development & Content Systems",
+                desc: "Custom WordPress builds, content structures and admin-friendly systems tailored to your business.",
+                action: "Launch My Content System",
               },
               {
                 title: "Basic AI Integrations",
-                desc: "Chatbots, summarization, intelligent endpoints.",
-                action: "Explore AI",
+                desc: "Chatbots, summarization, intelligent endpoints and AI-enhanced system features.",
+                action: "Add Intelligence to My System",
               },
               {
-                title: "Full Backend Setup",
-                desc: "CI/CD, cloud deployment and production-ready backend stacks.",
-                action: "Start Project",
+                title: "Full System Setup & Deployment",
+                desc: "CI/CD pipelines, cloud deployment and production-ready full-stack system setups.",
+                action: "Take My System Live",
               },
             ].map((s, i) => (
               <div className="project-card" key={i}>

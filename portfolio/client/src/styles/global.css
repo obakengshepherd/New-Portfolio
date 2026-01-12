@@ -33,6 +33,74 @@ section {
   padding: 6rem 8%;
 }
 
+/* =========================
+   TOP INFO BAR
+========================= */
+.top-info-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  background: #020617;
+  color: #e5e7eb;
+  font-size: 0.75rem;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+  z-index: 1100; /* MUST be higher than navbar */
+}
+
+.top-info-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0.4rem 1.5rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-info-left,
+.top-info-right {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.top-info-bar span {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  white-space: nowrap;
+}
+
+.top-info-bar a {
+  color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.top-info-bar a:hover {
+  color: #ef4444; /* red accent like examples */
+  transform: translateY(-1px);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .top-info-container {
+    flex-direction: column;
+    gap: 0.35rem;
+    text-align: center;
+  }
+
+  .top-info-left,
+  .top-info-right {
+    gap: 0.75rem;
+  }
+}
+
 /* ============================= */
 /* Navbar */
 /* ============================= */
@@ -51,6 +119,13 @@ section {
   transform: translateY(-3px);
   box-shadow: 0 10px 30px rgba(2, 6, 23, 0.6);
   background: linear-gradient(90deg, #334155, #3b82f6);
+}
+
+/* ✅ Brand link: disable hover effects */
+.nav-brand:hover,
+.nav-brand:focus {
+  transform: none;
+  background: none;
 }
 
 /* ============================= */
@@ -72,6 +147,7 @@ section {
 
 .hero h1 {
   font-size: 2.4rem;
+  margin-top: 4rem;
 }
 
 .hero p {
@@ -107,6 +183,24 @@ section {
   transform: translateY(-3px);
   box-shadow: 0 10px 30px rgba(2, 6, 23, 0.6);
   background: linear-gradient(90deg, #334155, #3b82f6);
+}
+
+.hero-icons {
+  display: flex;
+  justify-content: left;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  font-size: 1.6rem;
+  opacity: 0.85;
+}
+
+.hero-icons svg {
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.hero-icons svg:hover {
+  transform: translateY(-3px);
+  opacity: 1;
 }
 
 /* ============================= */

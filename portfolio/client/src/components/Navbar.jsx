@@ -9,12 +9,21 @@ export default function Navbar() {
   return (
     <nav style={styles.nav}>
       <a
-        className="nav-link"
+        className="nav-link nav-brand"
         href="#top"
-        style={{ fontWeight: 700, fontSize: "1rem" }}
+        style={{ fontWeight: 900, fontSize: "1.5rem" }}
         onClick={closeMenu}
       >
-        Tsaagane Obakeng Shepherd
+        <span
+          style={{
+            background: "linear-gradient(90deg, #334155, #3b82f6)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+          }}
+        >
+          Tsaagane
+        </span>{" "}
+        Obakeng
       </a>
 
       {/* Hamburger Icon */}
@@ -91,7 +100,7 @@ export default function Navbar() {
 const styles = {
   nav: {
     position: "fixed",
-    top: 0,
+    top: 30,
     width: "100%",
     padding: "1rem 8%",
     background: "rgba(15,23,42,0.95)",

@@ -296,6 +296,17 @@ export default function Home() {
               </div>
             ))}
           </div>
+
+          <h2
+            style={{
+              textAlign: "center",
+              marginTop: "2rem",
+            }}
+          >
+            I am open to working with and using any appropriate tool or
+            technology within my scope of services to deliver the best results
+            and get the job done effectively.
+          </h2>
         </div>
       </Section>
 
@@ -304,7 +315,7 @@ export default function Home() {
       ======================= */}
       <Section id="skills" title="Skills">
         {/* Tabs */}
-        <div className="hero-cta">
+        <div className="skills-tabs">
           <button className="btn" onClick={() => setActiveTab("frontend")}>
             Frontend
           </button>
